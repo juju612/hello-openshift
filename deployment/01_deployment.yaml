@@ -36,5 +36,4 @@ spec:
         configMap:
           name: hello-openshift-config
       restartPolicy: Always
-      restartPolicy: Always
 ---
