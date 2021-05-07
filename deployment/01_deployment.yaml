@@ -21,6 +21,9 @@ spec:
             secretKeyRef:
               name: hello-openshift-secret
               key: topsecret
+        volumeMounts:
+        - name: config-volume
+          mountPath: /tmp/config-data
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
@@ -34,5 +37,9 @@ spec:
             port: 9080
             scheme: HTTP
           initialDelaySeconds: 50
+      volumes:
+      - name: config-volume
+        configMap:
+          name: hello-openshift-config
       restartPolicy: Always
 ---
