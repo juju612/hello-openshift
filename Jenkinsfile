@@ -1,6 +1,6 @@
 node {
-    def GIT_URL = 'https://github.com/sdaschner/hello-openshift.git'
-    def PROJECT_NUMBER = '15'
+    def GIT_URL = 'https://github.com/juju612/hello-openshift.git'
+    def PROJECT_NUMBER = '07'
 
     timestamps {
         stage('checkout') {
